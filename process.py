@@ -62,7 +62,7 @@ def processing(text):
             title += '{}的聊天记录'.format(line.split()[0])
             break
     markdown = '### %s\n' % title
-    pattern = r'(\d{4}/\d{1,2}/\d{1,2} \d{2}:\d{2}:\d{2})'  # 正则表达式匹配时间
+    pattern = r'(\d{4}/\d{1,2}/\d{1,2} \d{1,2}:\d{2}:\d{2})'  # 正则表达式匹配时间
     prev_name = ''  # 当前发言者
     for line in text:
         match = re.search(pattern, line)
